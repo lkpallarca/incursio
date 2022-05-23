@@ -66,7 +66,7 @@ export function getHp() {
 
 export function initializeJourney() {
   distributeEnemies();
-  distributeHeals();
+  distributeHeals()
   setJourney(events);
   setHp(50);
   setIsEncounter(false);
