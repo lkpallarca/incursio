@@ -38,6 +38,29 @@
       @include perimeter(30px, 80px);
     }
   }
+
+  @media only screen and (max-width: 768px) {
+    .eventBox {
+      @include perimeter(25vmin, 150px);
+    }
+  
+    .eventInfo {
+      @include perimeter(25vh, 35vmin);
+  
+      h1 {
+        font-size: 18px;
+      }
+  
+      p {
+        font-size: 14px;
+        margin: 7.5px 0;
+      }
+  
+      .startEvent {
+        @include perimeter(20px, 60px);
+      }
+    }
+  }
 }
 
 .eventBox {

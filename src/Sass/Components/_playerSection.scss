@@ -48,9 +48,16 @@
   }
 
   .playerImage {
-    @include perimeter(100%, 10vw);
-    position: absolute;
-    top: 0;
-    left: 0;
+    @include perimeter(100%, 10vmin);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .playerSection {
+    flex-direction: column;
+    
+    .playerImage {
+      @include perimeter(100%, 20vmin);
+    }
   }
 }

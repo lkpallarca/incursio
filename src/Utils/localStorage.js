@@ -79,4 +79,5 @@ export function quitGame() {
   localStorage.removeItem('encounter');
   localStorage.removeItem('startEncounter');
   localStorage.removeItem('selectedCards');
+  localStorage.removeItem('userImage');
 }
