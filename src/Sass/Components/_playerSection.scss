@@ -1,0 +1,56 @@
+.playerSection {
+  @include perimeter(20vh, 70vw);
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid blue;
+  border-radius: 10px;
+
+  .playerMiddleInfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+    p {
+      color: white;
+      font-size: 20px;
+    }
+  }
+
+  .choiceWrapper {
+    display: flex;
+
+  }
+  
+  .hide {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .choices {
+    @include perimeter(50px, 50px);
+    cursor: pointer;
+    margin: 0 15px;
+    background-color: white;
+
+    &:hover {
+      transform: translateY(-20%);
+    }
+  }
+
+  .dim {
+    background-color: hsl(0, 0%, 50%);
+    pointer-events: none;
+  }
+
+  .playerImage {
+    @include perimeter(100%, 10vw);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: "Archivo";
+  vertical-align: baseline;
+}
+
+body {
+  background-color: hsl(225deg, 6%, 13%);
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.gamepage {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gamepage p {
+  color: white;
+  font-size: 20px;
+}
+.gamepage .endTurn {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  bottom: 15px;
+  right: 40px;
+}
+.gamepage .healScreen {
+  height: 25vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  border-radius: 40px;
+  text-align: center;
+  margin-top: 2vh;
+}
+.gamepage .healScreen h1 {
+  font-size: 25px;
+  color: white;
+  margin-bottom: 20px;
+}
+.gamepage .healScreen button {
+  height: 30px;
+  width: 80px;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: hsl(0deg, 0%, 80%);
+  font-size: 20px;
+}
+.homepage div {
+  margin: 3vh 0;
+}
+.homepage button {
+  height: 60px;
+  width: 150px;
+}
+
+.events {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.events .eventWrapper {
+  height: auto;
+  width: 80vw;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2vh 0;
+}
+.events .eventInfo {
+  height: 25vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  border-radius: 40px;
+  text-align: center;
+}
+.events .eventInfo h1 {
+  font-size: 25px;
+  color: white;
+}
+.events .eventInfo p {
+  font-size: 18px;
+  margin: 15px 0;
+  color: hsl(0deg, 0%, 60%);
+}
+.events .eventInfo .startEvent {
+  height: 30px;
+  width: 80px;
+}
+
+.eventBox {
+  height: 35vh;
+  width: 250px;
+  cursor: pointer;
+}
+.eventBox .eventImage {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.mainscreen {
+  height: 30vh;
+  width: 50vw;
+  position: relative;
+  border: 1px solid red;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2vh;
+}
+.mainscreen .enemyNumber, .mainscreen .playerNumber {
+  height: 45%;
+  width: 12.5vw;
+  position: relative;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+}
+.mainscreen .enemyNumber::before {
+  content: "Enemy Total";
+  position: absolute;
+  left: -50%;
+  font-size: 14px;
+  color: white;
+}
+.mainscreen .playerNumber::after {
+  content: "Your Total";
+  position: absolute;
+  right: -50%;
+  font-size: 14px;
+  color: white;
+}
+.mainscreen .enemyInfo {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.mainscreen .playerInfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.playerSection {
+  height: 20vh;
+  width: 70vw;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid blue;
+  border-radius: 10px;
+}
+.playerSection .playerMiddleInfo {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+.playerSection .playerMiddleInfo p {
+  color: white;
+  font-size: 20px;
+}
+.playerSection .choiceWrapper {
+  display: flex;
+}
+.playerSection .hide {
+  visibility: hidden;
+  opacity: 0;
+}
+.playerSection .choices {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  margin: 0 15px;
+  background-color: white;
+}
+.playerSection .choices:hover {
+  transform: translateY(-20%);
+}
+.playerSection .dim {
+  background-color: hsl(0deg, 0%, 50%);
+  pointer-events: none;
+}
+.playerSection .playerImage {
+  height: 100%;
+  width: 10vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

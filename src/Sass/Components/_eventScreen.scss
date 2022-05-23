@@ -1,0 +1,51 @@
+.events {
+  @include perimeter(100vh, 100vw);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  .eventWrapper {
+    @include perimeter(auto, 80vw);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2vh 0;
+
+  }
+
+  .eventInfo {
+    @include perimeter(25vh, 20vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    border-radius: 40px;
+    text-align: center;
+
+    h1 {
+      font-size: 25px;
+      color: white;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+      color: hsl(0, 0%, 60%);
+    }
+
+    .startEvent {
+      @include perimeter(30px, 80px);
+    }
+  }
+}
+
+.eventBox {
+  @include perimeter(35vh, 250px);
+  cursor: pointer;
+
+  .eventImage {
+    @include perimeter(100%, 100%);
+    border-radius: 10px;
+  }
+}

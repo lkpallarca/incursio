@@ -1,0 +1,41 @@
+.gamepage {
+  @include perimeter(100vh, 100vw);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    color: white;
+    font-size: 20px;
+  }
+
+  .endTurn {
+    @include perimeter(100px, 100px);
+    position: absolute;
+    bottom: 15px;
+    right: 40px;
+  }
+
+  .healScreen {
+    @include perimeter(25vh, 20vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    border-radius: 40px;
+    text-align: center;
+    margin-top: 2vh;
+
+    h1 {
+      font-size: 25px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    button {
+      @include perimeter(30px, 80px);
+    }
+  }
+}

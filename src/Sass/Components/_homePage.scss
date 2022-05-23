@@ -1,0 +1,16 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: hsl(0, 0%, 80%);
+  font-size: 20px;
+
+  div {
+    margin: 3vh 0;
+  }
+
+  button {
+    @include perimeter(60px, 150px);
+  }
+}
